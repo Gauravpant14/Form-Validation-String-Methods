@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/script.js"></script>
+  </head>
+
+  <body>
+    <!-- INSERT HTML HERE -->
+    <div class="container">
+      <h2>Form Validator Using String Methods</h2>
+
+      <div class="settings">
+        <div class="setting">
+          <label>First Name :</label>
+          <input
+            type="text"
+            id="fName"
+            class="myInput"
+            onkeyup="this.value = this.value.toUpperCase();"
+          />
+        </div>
+        <div class="setting">
+          <label>Last Name:</label>
+          <input
+            type="text"
+            id="lName"
+            class="myInput"
+            onkeyup="this.value = this.value[0].toUpperCase() + this.value.slice(1);"
+          />
+        </div>
+        <div class="setting">
+          <label>Mobile :</label>
+          <input type="text" id="mob" class="myInput" onkeyup="showWarning()" />
+        </div>
+
+        <span id="alert1">***Please Enter Numbers Only***</span>
+      </div>
+      <button class="btn btn-large submitIt" id="generate">SUBMIT</button>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/8f53a9283e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+let nameStringFunctionality = () => {
+  let nameInput = document.querySelector(".nameInput");
+  let submitButton = document.querySelector(".subButton");
+
+  //   adding event listner on submit button
+  submitButton.addEventListener("click", () => {
+    if (nameInput.value.includes("t")) {
+      let userNameInput = nameInput.value;
+      let filterNumber = userNameInput.replaceAll(/[0-9]/g, "");
+      console.log(filterNumber);
+      let finalValue = filterNumber.replaceAll(/[^a-zA-Z]/g, "");
+      alert(`Your Name is :${finalValue.toUpperCase()}`);
+    }
+  });
+};
+
+nameStringFunctionality();
